@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <title>My Portfolio</title>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans|Ubuntu|Lusitana&display=swap" rel="stylesheet">
+
+    <!-- load jquery -->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  </head>
+
+  {% block mycontent %}
+  {% endblock %}
+
+    <body class="body">
+      <div class="page-middle-box">
+        <div class="page-main">
+        </div>
+      </div>
+    </body>
+
+    <footer>
+      <p>
+        MyPortfolio | Built on <a href="https://www.python.org/"><img src="/static/images/python-logo.png" width="75px" style="vertical-align:middle"></a> and <a href="https://www.djangoproject.com/"><img src="/static/images/django-logo.png" width="55px" style="vertical-align:middle"></a> | Powered by<a href="https://www.mysql.com/"><img src="/static/images/mysql-logo.png" width="75px" style="vertical-align:middle"></a> | <img src="/static/images/amiga.png" width="75px" style="vertical-align:middle">
+      </p>
+    </footer>
+  </div> <!-- end of div class="title" from home.html -->
+</div>
+    <br>
+  </div>
+</html>
+
+
+
+<script>
+// jQuery smooth scrolling
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          //} else {
+          //  $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            // $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+</script>

@@ -1,0 +1,46 @@
+<div class="section-box">
+<h3>- COURSES & CERTIFICATES -</h3>
+<div class="icon">
+  <img src="/static/images/courses.png" width="50px">
+</div>
+{% for course in courses reversed %}
+  {% if course.courseDateTo == "" %}
+    {% if "REST APIS" in course.courseName %}
+      <div class="section-box-courses-label-left"><a href="https://www.dropbox.com/s/y6emqu24r7bq447/UC-f77f623f-1a54-482a-8d14-d3f19f6263a6.pdf?dl=0">{{ course.courseName }}</a></div>
+      <div class="section-box-courses-label-right">{{ course.courseDateFrom }}</div>
+
+    {% elif "AUTOMATED SOFTWARE" in course.courseName %}
+      <div class="section-box-courses-label-left"><a href="https://www.dropbox.com/s/3vqwxhwsds9au3t/UC-e0e10217-0e88-4fbb-83c7-c43c8beb919a.pdf?dl=0">{{ course.courseName }}</a></div>
+      <div class="section-box-courses-label-right">{{ course.courseDateFrom }}</div>
+      
+    {% elif "UX, UI" in course.courseName %}
+      <div class="section-box-courses-label-left"><a href="https://www.dropbox.com/s/4t52ptcicavanon/UC-6f805087-3e1a-4f05-aa11-edacafeb43f1.pdf?dl=0">{{ course.courseName }}</a></div>
+      <div class="section-box-courses-label-right">{{ course.courseDateFrom }}</div>
+      
+    {% else %}
+      <div class="section-box-courses-label-left">{{ course.courseName }}</div>
+      <div class="section-box-courses-label-right">{{ course.courseDateFrom }}</div>
+    {% endif %}
+  
+  {% else %}
+
+    {% if "REST APIS" in course.courseName %}
+      <div class="section-box-courses-label-left"><a href="https://www.dropbox.com/s/y6emqu24r7bq447/UC-f77f623f-1a54-482a-8d14-d3f19f6263a6.pdf?dl=0">{{ course.courseName }}</a></div>
+      <div class="section-box-courses-label-right">{{ course.courseDateFrom }} - {{ course.courseDateTo }}</div>
+
+    {% elif "AUTOMATED SOFTWARE" in course.courseName %}
+      <div class="section-box-courses-label-left"><a href="https://www.dropbox.com/s/3vqwxhwsds9au3t/UC-e0e10217-0e88-4fbb-83c7-c43c8beb919a.pdf?dl=0">{{ course.courseName }}</a></div>
+      <div class="section-box-courses-label-right">{{ course.courseDateFrom }} - {{ course.courseDateTo }}</div>
+
+    {% elif "GOOGLE" in course.courseName %}
+      <div class="section-box-courses-label-left"><a href="https://www.dropbox.com/s/2e8to8aq6v04436/Coursera%205BWGAV2WPGFU.pdf?dl=0">{{ course.courseName }}</a></div>
+      <div class="section-box-courses-label-right">{{ course.courseDateFrom}} - {{ course.courseDateTo }}</div>
+
+      {% else %}
+      <div class="section-box-courses-label-left">{{ course.courseName }}</div>
+      <div class="section-box-courses-label-right">{{ course.courseDateFrom }} - {{ course.courseDateTo }}</div>
+
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</div>

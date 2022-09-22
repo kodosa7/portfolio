@@ -1,0 +1,318 @@
+body {
+    overflow-x: hidden;
+}
+
+.icon {
+    vertical-align: middle;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+.title {
+    background: #eaf5ff;
+    color: black;
+    text-align: center;
+    position: relative;
+}
+
+.title-pic {
+    background:#f5faff;
+    color: black;
+}
+
+.title-pic-top-box {
+    background: #9cd7ff;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    height: 75px;
+}
+
+.title-pic-line {
+    background: #0084ff;
+    height: 4px;
+    margin-top: -102px;
+    z-index: -1;
+}
+
+#firstname {
+    font-family: Nunito Sans, sans-serif;
+    font-size: 2.3em;
+    padding-top: 120px;
+    left: -900px;
+    position: relative;
+}
+
+#lastname {
+    font-family: Lusitana, serif;
+    font-size: 4.5em;
+    right: -1100px;
+    position: relative;
+}
+
+#profession {
+    font-family: Nunito Sans, sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    color: #a0a0a0;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.motto {
+    font-family: Ubuntu, sans-serif;
+    font-size: 2.9em;
+    text-align: center;
+    background: #0084ff;
+    color: #ffffff;
+    padding: 15px 15px;
+}
+
+.personal-desc {
+    font-family: Nunito Sans, sans-serif;
+    font-size: 1.75em;
+    text-align: center;
+    background: #9cd7ff;
+    color: #333;
+    padding: 20px 20% 20px 20%;
+}
+
+.navbar {
+    font-family: Nunito Sans, sans-serif;
+    font-size: 2em;
+    text-align: center;
+    background: #333;
+    color: #ff9292;
+    padding: 15px 0 15px 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3em;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: black;
+    background: white;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+}
+
+.navbar #button {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline;
+}
+
+.section-box {
+    width: 55%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px 25px 55px 25px;
+    background: white;
+    color: #333;
+    font-family: Nunito Sans, sans-serif;
+    box-shadow: 10px 10px 8px #888;
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* section box big label */
+.section-box h3 {
+    text-align: center; 
+    padding-top: 40px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    font-size: 3.0em;
+}
+
+.section-box-contact-data {
+    color: black;
+    font-size: 2.3em;
+    font-weight: bold;
+}
+
+.section-box-contact-data a {
+    text-decoration: none;
+    color: black;
+}
+
+.section-box-contact-label {
+    color: #8c8c8c;
+    font-size: 1.8em;
+    padding-bottom: 30px;
+}
+
+.section-box-skills-data {
+    color: #8c8c8c;
+    font-size: 1.8em;
+    padding-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.section-box-skills-label {
+    color: #6782a0;
+    font-size: 2.1em;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+#skill-bar {
+    margin: auto;
+    width: calc(90% - 10px);
+    height: 20px;
+    border-style: solid;
+    border-color: #6782a0;
+    border-radius: 5px;
+    border-width: 2px;
+}
+
+#skill-bar-inner {
+    margin-left: 1px;
+    height: 18px;
+    background: #6782a0;
+    border-style: solid;
+    border-color: white;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+.skill-box {
+    position: relative;
+    margin: 5px;
+    float: left;
+    width: calc(25% - 10px);
+    height: 170px;
+    background-color: #f5faff;
+    border-radius: 10px;
+}
+
+.skill-box-outer {
+    height: 520px;
+}
+
+.section-box-history-label-left {
+    color: #8c8c8c;
+    font-size: 1.8em;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    text-align: left;
+    float: left;
+}
+
+.section-box-history-label-right {
+    color: #8c8c8c;
+    font-size: 1.8em;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    text-align: right;
+}
+
+.section-box-history-desc {
+    color: #666;
+    font-size: 1.2em;
+}
+
+.section-box-history-skills {
+    color: black;
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.section-box-courses-label-left {
+    color: #8c8c8c;
+    font-size: 1.25em;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    text-align: left;   
+    float: left;
+}
+
+.section-box-courses-label-left a {
+    color: #8c8c8c;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+.section-box-courses-label-left a:hover {
+    color: white;
+    background: black;
+    padding: 5x 5px 5px 5px;
+    border-radius: 5px;
+}
+
+.section-box-courses-label-right {
+    color: #8c8c8c;
+    font-size: 1.25em;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    text-align: right;
+}
+
+.portfolio-box {
+    position: relative;
+    margin: 5px;
+    float: none;
+    background-color: #f5faff;
+    border-radius: 10px;
+    padding-bottom: 50px;
+}
+
+.section-box-portfolio-data {
+    color: #333;
+    font-size: 1.2em;
+    padding-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.section-box-portfolio-label {
+    color: #6782a0;
+    font-size: 2.4em;
+    padding-bottom: 10px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+#section-box-portfolio-pic {
+    background: #0084ff;
+    color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+footer {
+    width: 56.5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    overflow: visible;
+    background-color: #0f0f0f;
+    color: #999;
+    padding: 25px 0 22px 25px;
+    border-radius: 10px;
+  }
+  
+footer p {
+    font-family: Nunito Sans, sans-serif;
+    font-size: 1em;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 20px;
+    text-align: left;
+
+}
+  
+footer a {
+    color: #0066e2;
+    text-decoration: none;
+}

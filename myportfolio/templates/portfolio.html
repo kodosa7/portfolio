@@ -1,0 +1,13 @@
+<div class="section-box">
+<h3>- PORTFOLIO & HOBBIES -</h3>
+<div class="icon">
+  <img src="/static/images/project.png" width="50px">&nbsp;<img src="/static/images/hobbies.png" width="50px">
+</div>
+  <div class="portfolio-box">
+    {% for portfolio in portfolios reversed %}
+      <div class="section-box-portfolio-label">{{ portfolio.portfolioName }}</div>
+      <div class="section-box-portfolio-data">{{ portfolio.portfolioType }}</div>
+      <div id="section-box-portfolio-pic"><a href="{{ portfolio.portfolioURL }}"><img src="{{ portfolio.portfolioMedia.url }}" width="85%"></a></div>
+    {% endfor %}
+  </div>
+</div>

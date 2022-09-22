@@ -1,0 +1,19 @@
+<div class="section-box">
+  <h3>- SKILLS -</h3>
+  <div class="icon">
+    <img src="/static/images/skills.png" width="50px">
+  </div>
+  <div class="skill-box-outer">
+    {% for skill in skills %}
+    
+    <div class="skill-box">
+      <div class="section-box-skills-label">{{ skill.skillType }}</div>
+      <div id="skill-bar">
+        <div id="skill-bar-inner"style="width: calc({{ skill.skillBar }}% - 4px);">
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+

@@ -1,0 +1,21 @@
+<div class="section-box">
+<h3>- EMPLOYMENT -</h3>
+<div class="icon">
+  <img src="/static/images/employment.png" width="50px">
+</div>
+{% for history in historys %}
+  {% if hostory.historyDateTo == "" %}
+    <div class="section-box-history-label-left">{{ history.historyPosition }} | {{ history.historyFirm }}</div>
+    <div class="section-box-history-label-right">{{ history.historyDateFrom }}</div>
+  {% else %}
+    <div class="section-box-history-label-left">{{ history.historyPosition }} | {{ history.historyFirm }}</div>
+    <div class="section-box-history-label-right">{{ history.historyDateFrom }} - {{ history.historyDateTo }}</div>
+  {% endif %}
+  <p>
+    <div class="section-box-history-desc">{{ history.historyDescription }}</div>
+  </p>
+  <p>
+    <div class="section-box-history-skills">{{ history.historySkills }}</div>
+  </p>
+{% endfor %}
+</div>

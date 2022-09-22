@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block mycontent %}
+<script type="text/javascript"
+src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+  // fade in picture
+  $(document).ready(function(){
+      $('#photo').hide(0, function(){
+        $(this).fadeIn(2000);
+      });
+    });
+  // scroll in firstname from the left
+  $(function(){
+      $('#firstname').animate({
+        "left": "0px"
+      }, 600);
+    })
+  // scroll in lastname from the right
+  $(function(){
+      $('#lastname').animate({
+        "right": "0px"
+      }, 1000);
+    });
+  // finally show up the profession text
+  $(function(){
+      $('#profession').hide(0, function(){
+        $(this).fadeIn(2000);
+      });
+    });
+</script>
+
+{% for personal in personals %}      
+<div class="title"> <!-- this div ends in base.html -->
+  <div class="title-pic">
+    <div class="title-pic-top-box">
+      <div id="photo"><img src="{{ personal.myPic.url }}" width="192">
+        <div class="title-pic-line"></div>
+      </div>
+    </div>
+  </div>
+ 
+
+  <div id="firstname">{{ personal.myFirstName }}</div>
+  <div id="lastname">{{ personal.myLastName }}</div>
+  <div id="profession">{{ personal.myProfession }}</div>
+
+  <div class="motto"><> always learning new things <&#47;></div>
+  <div class="personal-desc">{{ personal.myDescription }}</div>
+{% endfor %}
+
+<div class="navbar">
+  {% include 'navbar.html' %}
+</div>
+
+<div id="skills">{% include 'skill.html' %}</div>
+<div id="education">{% include 'history.html' %}</div>
+<div id="courses">{% include 'course.html' %}</div>
+<div id="portfolio">{% include 'portfolio.html' %}</div>
+<div id="contacts">{% include 'contact.html' %}</div>
+
+{% endblock %}

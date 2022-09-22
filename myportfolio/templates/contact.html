@@ -1,0 +1,17 @@
+<div class="section-box">
+  <h3>- CONTACT -</h3>
+<div class="icon">
+  <img src="/static/images/contact.png" width="50px">
+</div>
+
+{% for contact in contacts %}
+  {% if "https://" not in contact.contactData %}
+    <div class="section-box-contact-data">{{ contact.contactData }}</div>
+    <div class="section-box-contact-label">{{ contact.contactName }}</div>
+  {% else %}
+    <div class="section-box-contact-data"><a href="{{ contact.contactData }}">{{ contact.contactData }}</a></div>
+    <div class="section-box-contact-label">{{ contact.contactName }}</div>
+  {% endif %}
+{% endfor %}
+
+</div>
